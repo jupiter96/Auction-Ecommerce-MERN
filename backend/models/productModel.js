@@ -2,7 +2,6 @@
 import mongoose from 'mongoose';
 
 const productSchema = new mongoose.Schema(
-  // Accepts objest as parameter that defines the fields of products
   {
     name: { type: String, required: true, unique: true },
     url: { type: String, required: true, unique: true },
@@ -15,13 +14,11 @@ const productSchema = new mongoose.Schema(
     stock: { type: Number, required: true },
     reviews: { type: Number, required: true },
   },
-  // Accepts options
   {
-    timestamps: true, // for logging timestamp for create and update of records
+    timestamps: true,
   }
 );
 
-// creating model for schema
 const Product = mongoose.model('Product', productSchema);
 
 export default Product;

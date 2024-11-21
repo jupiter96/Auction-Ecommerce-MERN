@@ -1,8 +1,6 @@
-// Orders database from DB
 import mongoose from 'mongoose';
 
 const orderSchema = new mongoose.Schema(
-  // Accepts objest as parameter that defines the fields of products
   {
     orderItems: [
       {
@@ -43,13 +41,11 @@ const orderSchema = new mongoose.Schema(
     isDelivered: { type: Boolean, default: false },
     deliveredAt: { type: Date },
   },
-  // Accepts options
   {
-    timestamps: true, // for logging timestamp for create and update of records
+    timestamps: true,
   }
 );
 
-// creating model for schema
 const Order = mongoose.model('Order', orderSchema);
 
 export default Order;

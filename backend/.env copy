@@ -1,11 +1,9 @@
-<!-- Add values without <> -->
-
-MONGODB_URI = <Your MongoDB URI>
-JWT_SECRET = <Any Secret Value>
-PAYPAL_CLIENT_ID = <PayPal URI>
+MONGODB_URI =
+JWT_SECRET =
+PAYPAL_CLIENT_ID =
 
 CLOUDINARY_CLOUD_NAME= ''
 CLOUDINARY_API_KEY= ''
 CLOUDINARY_API_SECRET= ''
 
-API_URI = <Your Frontend URL>
+API_URI =

@@ -5,7 +5,6 @@ import { isAdmin, isAuth, isSeller } from '../utils.js';
 
 const auctionRouter = express.Router();
 
-// Create new auction
 auctionRouter.post('/', isAuth, isSeller, async (req, res) => {
   try {
     const { title, description, startingBid, imageUrl, endDate } = req.body;
@@ -29,7 +28,6 @@ auctionRouter.post('/', isAuth, isSeller, async (req, res) => {
   }
 });
 
-// Get all auctions
 auctionRouter.get('/', async (req, res) => {
   try {
     const auctions = await Auction.find({});
@@ -54,7 +52,6 @@ auctionRouter.get('/:id', isAuth, async (req, res) => {
   }
 });
 
-// Place a bid on an auction
 auctionRouter.post('/:id/bids', isAuth, async (req, res) => {
   try {
     const auction = await Auction.findById(req.params.id);
