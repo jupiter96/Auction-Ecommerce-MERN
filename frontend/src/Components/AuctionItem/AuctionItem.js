@@ -43,7 +43,7 @@ function AuctionItem({
   return (
     <div className="bg-white shadow-md rounded-md overflow-hidden" key={id}>
       <Helmet>
-        <title>Auction House-EcomBidding</title>
+        <title>Auction House-Ecommerce</title>
       </Helmet>
       <div className="relative">
         <img
@@ -78,14 +78,14 @@ function AuctionItem({
                 className="w-full py-2 px-4 cursor-not-allowed bg-gray-100 text-gray-400 duration-200 rounded-md mt-4"
                 disabled
               >
-                Auction Ended
+                Auction Ended!
               </button>
             )}
           </>
         ) : (
           <Link to={userInfo ? `/auctions/${id}` : '/signin'}>
             <button className="w-full py-2 px-4 bg-gray-300 text-gray-600 duration-200 rounded-md mt-4 hover:bg-gray-400">
-              Bid Now
+              Bid Now!
             </button>
           </Link>
         )}
